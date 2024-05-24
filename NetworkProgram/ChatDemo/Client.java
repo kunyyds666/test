@@ -29,12 +29,13 @@ public class Client extends JFrame {
 
         // Create the top panel with server info label and disconnect button
         serverInfoLabel = new JLabel("Not connected");
-        disconnectButton = new JButton("X");
+        disconnectButton = new JButton("EXIT");
         disconnectButton.setForeground(Color.RED);
         disconnectButton.setBackground(Color.WHITE);
         disconnectButton.setBorder(BorderFactory.createEmptyBorder());
         disconnectButton.setFocusPainted(false);
         disconnectButton.setVisible(false); // Initially hidden
+
 
         disconnectButton.addActionListener(new ActionListener() {
             @Override
@@ -51,16 +52,16 @@ public class Client extends JFrame {
         // Create the chat panel but do not add it initially
         chatPanel = new JPanel(new BorderLayout());
 
-        JPanel messagePanel = new JPanel(new FlowLayout());
-        messageField = new JTextField(15);
+        JPanel messagePanel = new JPanel(new BorderLayout());
+        messageField = new JTextField();
         sendButton = new JButton("Send");
         changeNameButton = new JButton("Change Name");
         chatPane = new JTextPane();
         chatPane.setEditable(false);
 
-        messagePanel.add(changeNameButton);
-        messagePanel.add(messageField);
-        messagePanel.add(sendButton);
+        messagePanel.add(messageField, BorderLayout.CENTER);
+        messagePanel.add(sendButton, BorderLayout.EAST);
+        messagePanel.add(changeNameButton, BorderLayout.WEST);
 
         chatPanel.add(new JScrollPane(chatPane), BorderLayout.CENTER);
         chatPanel.add(messagePanel, BorderLayout.SOUTH);
@@ -229,3 +230,5 @@ public class Client extends JFrame {
         });
     }
 }
+
+

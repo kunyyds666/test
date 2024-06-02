@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/MoreThread" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/NetworkProgram" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SpringBoot3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Spring" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Stream" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
